@@ -27,7 +27,7 @@
                 -->
                 <a
                     href="{{ route('index') }}"
-                    class="text-[#1E2B4F] relative after:absolute after:content-[''] after:border-b-2 after:border-[#0D63F5] after:w-8/12 after:-translate-x-1/2 after:bottom-3 after:left-1/2 font-semibold inline-flex items-center px-1 text-lg"
+                    class="text-[#1E2B4F] relative {{ request()->is('/') ? "after:absolute after:content-[''] after:border-b-2 after:border-[#0D63F5] after:w-8/12 after:-translate-x-1/2 after:bottom-3 after:left-1/2 font-semibold inline-flex items-center px-1 text-lg" : "hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium" }} "
                 >
                     Home
                 </a>
