@@ -1,0 +1,119 @@
+{
+  "listItems": [
+    {
+      "name": "Alerts",
+      "url": "component-alerts.html",
+      "icon": "ft-alert-triangle"
+    },
+    {
+      "name": "Callout",
+      "url": "component-callout.html",
+      "icon": "ft-phone-call"
+    },
+    {
+      "name": "Basic Buttons",
+      "url": "component-buttons-basic.html",
+      "icon": "ft-plus-circle"
+    },
+    {
+      "name": "Extended Buttons",
+      "url": "component-buttons-extended.html",
+      "icon": "ft-plus-circle"
+    },
+    {
+      "name": "Carousel",
+      "url": "component-carousel.html",
+      "icon": "ft-refresh-ccw"
+    },
+    {
+      "name": "Collapse",
+      "url": "component-collapse.html",
+      "icon": "ft-minimize-2"
+    },
+    {
+      "name": "Dropdowns",
+      "url": "component-dropdowns.html",
+      "icon": "ft-chevrons-down"
+    },
+    {
+      "name": "List Group",
+      "url": "component-list-group.html",
+      "icon": "ft-list"
+    },
+    {
+      "name": "Modals",
+      "url": "component-modals.html",
+      "icon": "ft-box"
+    },
+    {
+      "name": "Pagination",
+      "url": "component-pagination.html",
+      "icon": "ft-file-text"
+    },
+    {
+      "name": "Navs Component",
+      "url": "component-navs-component.html",
+      "icon": "ft-layout"
+    },
+    {
+      "name": "Tabs Component",
+      "url": "component-tabs-component.html",
+      "icon": "ft-tablet"
+    },
+    {
+      "name": "Pills Component",
+      "url": "component-pills-component.html",
+      "icon": "ft-toggle-right"
+    },
+    {
+      "name": "Tooltips",
+      "url": "component-tooltips.html",
+      "icon": "ft-share"
+    },
+    {
+      "name": "Popovers",
+      "url": "component-popovers.html",
+      "icon": "ft-share"
+    },
+    {
+      "name": "Badges",
+      "url": "component-badges.html",
+      "icon": "ft-toggle-right"
+    },
+    {
+      "name": "Pill Badges",
+      "url": "component-pill-badges.html",
+      "icon": "ft-toggle-right"
+    },
+    {
+      "name": "Progress",
+      "url": "component-progress.html",
+      "icon": "ft-sliders"
+    },
+    {
+      "name": "Media Objects",
+      "url": "component-media-objects.html",
+      "icon": "ft-image"
+    },
+    {
+      "name": "Scrollable",
+      "url": "component-scrollable.html",
+      "icon": "ft-maximize-2"
+    },
+    {
+      "name": "Spinners",
+      "url": "component-spinners.html",
+      "icon": "ft-rotate-ccw"
+    },
+    {
+      "name": "Toast & Custom Switch",
+      "url": "components-toast.html",
+      "icon": "ft-toggle-left"
+    },
+    {
+      "name": "Bootstrap Spinner",
+      "url": "components-bootstrap-spinner.html",
+      "icon": "ft-rotate-ccw"
+    }
+  ]
+}

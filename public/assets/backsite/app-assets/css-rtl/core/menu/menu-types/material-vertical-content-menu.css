@@ -1,0 +1,770 @@
+/*=========================================================================================
+	File Name: vertical-content-menu.scss
+	Description: A vertical style content menu with expand and collops support. It support
+	light & dark version, filpped layout, right side icons, native scroll and borders menu
+	item seperation.
+	----------------------------------------------------------------------------------------
+	Item Name: Modern Admin - Clean Bootstrap 4 Dashboard HTML Template
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+==========================================================================================*/
+.vertical-content-menu.menu-expanded .navbar .navbar-header {
+  float : right;
+  width : 260px;
+}
+
+.vertical-content-menu.menu-expanded .navbar.navbar-brand-center .navbar-header {
+  float : right;
+  width : auto;
+}
+
+.vertical-content-menu.menu-expanded .navbar.navbar-brand-center .navbar-container {
+  margin-right : 0;
+}
+
+.vertical-content-menu.menu-expanded .navbar .navbar-container {
+  margin-right : 260px;
+}
+
+.vertical-content-menu.menu-expanded .main-menu {
+  width : 260px;
+  -webkit-transition : 300ms ease all;
+          transition : 300ms ease all;
+  -webkit-backface-visibility : hidden;
+          backface-visibility : hidden;
+  top : inherit;
+}
+.vertical-content-menu.menu-expanded .main-menu .navigation .navigation-header .ft-minus, .vertical-content-menu.menu-expanded .main-menu .navigation .navigation-header .nav-menu-icon {
+  display : none;
+}
+.vertical-content-menu.menu-expanded .main-menu .navigation > li > a > i {
+  margin-left : 12px;
+  float : right;
+}
+.vertical-content-menu.menu-expanded .main-menu .navigation > li > a > i:before {
+  font-size : 1.6rem;
+}
+.vertical-content-menu.menu-expanded .main-menu .navigation > li > a > span {
+  display : inline-block;
+}
+.vertical-content-menu.menu-expanded .main-menu .navigation > li > a > span.tag {
+  position : absolute;
+  left : 20px;
+}
+.vertical-content-menu.menu-expanded .main-menu .navigation li.has-sub > a:not(.mm-next):after {
+  content : '\f112';
+  font-family : 'LineAwesome';
+  font-size : 1rem;
+  display : inline-block;
+  position : absolute;
+  left : 20px;
+  top : 13px;
+  -webkit-transform : rotate(0deg);
+      -ms-transform : rotate(0deg);
+          transform : rotate(0deg);
+  transition : -webkit-transform 0.2s ease-in-out;
+}
+.vertical-content-menu.menu-expanded .main-menu .navigation li.has-sub .has-sub > a:not(.mm-next):after {
+  top : 11px;
+}
+.vertical-content-menu.menu-expanded .main-menu .navigation li.open > a:not(.mm-next):after {
+  -webkit-transform : rotate(-90deg);
+      -ms-transform : rotate(-90deg);
+          transform : rotate(-90deg);
+}
+
+.vertical-content-menu.menu-expanded .content-body {
+  margin-right : 288px;
+  -webkit-transition : 300ms ease all;
+          transition : 300ms ease all;
+}
+
+.vertical-content-menu.menu-expanded.menu-flipped .content-body {
+  margin : 0;
+  margin-left : 288px;
+  -webkit-transition : 300ms ease all;
+          transition : 300ms ease all;
+}
+
+@media (min-width: 576px) {
+  .vertical-content-menu.menu-expanded.menu-flipped:not(.boxed-layout) .main-menu {
+    left : 20px;
+  }
+  .vertical-content-menu.menu-expanded.menu-flipped.boxed-layout .main-menu {
+    float : left;
+    position : relative;
+  }
+}
+
+.vertical-content-menu.menu-expanded.menu-flipped .navbar .navbar-header {
+  float : left;
+}
+
+.vertical-content-menu.menu-expanded.menu-flipped .navbar .navbar-container {
+  margin : 0;
+  margin-left : 260px;
+}
+
+.vertical-content-menu.menu-collapsed .navbar .navbar-header {
+  float : right;
+  width : 260px;
+}
+
+.vertical-content-menu.menu-collapsed .navbar.navbar-brand-center .navbar-header {
+  float : right;
+  width : auto;
+}
+
+.vertical-content-menu.menu-collapsed .navbar.navbar-brand-center .navbar-container {
+  margin-right : 0;
+}
+
+.vertical-content-menu.menu-collapsed .navbar .navbar-container {
+  margin-right : 260px;
+}
+
+.vertical-content-menu.menu-collapsed .main-menu {
+  width : 70px;
+  -webkit-transform : translateZ(-160px) translateX(160px);
+          transform : translateZ(-160px) translateX(160px);
+  -webkit-transform : translate3d(0, 0, 0);
+          transform : translate3d(0, 0, 0);
+  -webkit-transition : 300ms ease all;
+          transition : 300ms ease all;
+  top : inherit;
+}
+.vertical-content-menu.menu-collapsed .main-menu .main-menu-header .user-content {
+  padding : 20px 10px;
+}
+.vertical-content-menu.menu-collapsed .main-menu .main-menu-header .media-body .media-heading, .vertical-content-menu.menu-collapsed .main-menu .main-menu-header .media-body .text-muted, .vertical-content-menu.menu-collapsed .main-menu .main-menu-header .media-right {
+  display : none;
+}
+.vertical-content-menu.menu-collapsed .main-menu .main-menu-header .media-body {
+  opacity : 0;
+}
+.vertical-content-menu.menu-collapsed .main-menu .main-menu-content > span.menu-title, .vertical-content-menu.menu-collapsed .main-menu .main-menu-content a.menu-title {
+  left : -260px;
+  width : 260px;
+  font-weight : 600;
+  color : #FFFFFF;
+  text-transform : uppercase;
+  text-align : right;
+  background-color : #00BCD4;
+  border-color : #00BCD4;
+  padding : 15px 20px;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .vertical-content-menu.menu-collapsed .main-menu .main-menu-content > span.menu-title, .vertical-content-menu.menu-collapsed .main-menu .main-menu-content a.menu-title {
+    right : 59px !important;
+  }
+}
+.vertical-content-menu.menu-collapsed .main-menu .main-menu-content > ul.menu-content {
+  right : 70px;
+  width : 260px;
+  -webkit-transition : visibility 0.25s, opacity 0.25s;
+          transition : visibility 0.25s, opacity 0.25s;
+  box-shadow : -25px 5px 75px 2px rgba(64, 70, 74, 0.2);
+  border-bottom : 1px solid rgba(0, 0, 0, 0.2);
+  border-right : 1px solid rgba(0, 0, 0, 0.02);
+}
+.vertical-content-menu.menu-collapsed .main-menu .main-menu-content > ul.menu-content li {
+  white-space : nowrap;
+  position : relative;
+}
+.vertical-content-menu.menu-collapsed .main-menu .main-menu-content > ul.menu-content li a {
+  display : block;
+  padding : 12px 20px 12px 20px;
+  -webkit-transition : all 0.2s ease;
+          transition : all 0.2s ease;
+}
+.vertical-content-menu.menu-collapsed .main-menu .main-menu-content > ul.menu-content li.has-sub > a:not(.mm-next):after {
+  content : '\f112';
+  font-family : 'LineAwesome';
+  font-size : 1rem;
+  display : inline-block;
+  position : absolute;
+  left : 20px;
+  top : 13px;
+  -webkit-transform : rotate(0deg);
+      -ms-transform : rotate(0deg);
+          transform : rotate(0deg);
+  transition : -webkit-transform 0.2s ease-in-out;
+}
+.vertical-content-menu.menu-collapsed .main-menu .main-menu-content > ul.menu-content li.has-sub .has-sub > a:not(.mm-next):after {
+  top : 11px;
+}
+.vertical-content-menu.menu-collapsed .main-menu .main-menu-content > ul.menu-content li.open > a:not(.mm-next):after {
+  -webkit-transform : rotate(-90deg);
+      -ms-transform : rotate(-90deg);
+          transform : rotate(-90deg);
+}
+.vertical-content-menu.menu-collapsed .main-menu .main-menu-content > ul.menu-content li:hover > a, .vertical-content-menu.menu-collapsed .main-menu .main-menu-content > ul.menu-content li.hover > a {
+  -webkit-transform : translateX(-4px);
+      -ms-transform : translateX(-4px);
+          transform : translateX(-4px);
+}
+.vertical-content-menu.menu-collapsed .main-menu .main-menu-content > ul.menu-content li:hover > a > a, .vertical-content-menu.menu-collapsed .main-menu .main-menu-content > ul.menu-content li.hover > a > a {
+  -webkit-transform : translateX(4px);
+      -ms-transform : translateX(4px);
+          transform : translateX(4px);
+}
+.vertical-content-menu.menu-collapsed .main-menu .navigation {
+  overflow : visible;
+}
+.vertical-content-menu.menu-collapsed .main-menu .navigation > li.navigation-header {
+  padding : 30px 20px 8px 20px;
+}
+.vertical-content-menu.menu-collapsed .main-menu .navigation > li.navigation-header .ft-minus {
+  display : block;
+  padding : 12px 0;
+  text-align : center;
+  font-size : 1.6rem;
+}
+.vertical-content-menu.menu-collapsed .main-menu .navigation > li.navigation-header span {
+  display : none;
+}
+.vertical-content-menu.menu-collapsed .main-menu .navigation > li > a {
+  padding : 8px 20px;
+  text-align : center;
+}
+.vertical-content-menu.menu-collapsed .main-menu .navigation > li > a > span {
+  visibility : hidden;
+  opacity : 0;
+  position : absolute;
+  top : 0;
+  left : -260px;
+  width : 260px;
+  font-weight : 600;
+  color : #FFFFFF;
+  text-align : right;
+  background-color : #673AB7;
+  border-color : #673AB7;
+  padding : 11px 20px;
+}
+.vertical-content-menu.menu-collapsed .main-menu .navigation > li > a > i {
+  margin-left : 0;
+  font-size : 1.6rem;
+  visibility : visible;
+}
+.vertical-content-menu.menu-collapsed .main-menu .navigation > li > ul {
+  display : none;
+}
+.vertical-content-menu.menu-collapsed .main-menu .navigation > li > a > span {
+  display : none;
+}
+.vertical-content-menu.menu-collapsed .main-menu .mTSWrapper {
+  overflow : visible;
+}
+
+.vertical-content-menu.menu-collapsed .content-body {
+  margin-right : 95px;
+  -webkit-transition : 300ms ease all;
+          transition : 300ms ease all;
+}
+
+.vertical-content-menu.menu-collapsed.menu-flipped .content-body {
+  margin-right : 0;
+  margin-left : 95px;
+  -webkit-transition : 300ms ease all;
+          transition : 300ms ease all;
+}
+
+@media (min-width: 576px) {
+  .vertical-content-menu.menu-collapsed.menu-flipped:not(.boxed-layout) .main-menu {
+    left : 1.5rem;
+  }
+  .vertical-content-menu.menu-collapsed.menu-flipped:not(.boxed-layout) .main-menu span.menu-title {
+    left : 70px;
+  }
+  .vertical-content-menu.menu-collapsed.menu-flipped:not(.boxed-layout) .main-menu ul.menu-content {
+    left : 70px;
+    right : inherit;
+  }
+  .vertical-content-menu.menu-collapsed.menu-flipped.boxed-layout .main-menu {
+    float : left;
+    position : relative;
+  }
+  .vertical-content-menu.menu-collapsed.menu-flipped.boxed-layout span.menu-title {
+    left : 70px;
+  }
+  .vertical-content-menu.menu-collapsed.menu-flipped.boxed-layout ul.menu-content {
+    left : 70px;
+    right : inherit;
+  }
+}
+
+.vertical-content-menu.menu-collapsed.menu-flipped .navbar .navbar-header {
+  float : left;
+}
+
+.vertical-content-menu.menu-collapsed.menu-flipped .navbar .navbar-container {
+  margin : 0;
+  margin-left : 260px;
+}
+
+.vertical-content-menu .navbar-brand-center .content, .vertical-content-menu .navbar-brand-center .footer {
+  margin-right : 0;
+}
+
+.vertical-content-menu.boxed-layout.menu-flipped .main-men {
+  float : left;
+  position : relative;
+}
+
+[data-textdirection='rtl'] body.vertical-layout.vertical-content-menu.menu-collapsed .main-menu .navigation > li > a {
+  padding : 8px 12px 20px !important;
+}
+
+[data-textdirection='rtl'] body.vertical-layout.vertical-content-menu.menu-collapsed .main-menu .navigation > li.navigation-header .ft-minus {
+  padding : 12px 0;
+}
+
+@media (min-width: 992px) {
+  body.vertical-content-menu .main-menu, body.vertical-content-menu .vertical-overlay-menu.menu-hide .main-menu, .vertical-overlay-menu.menu-hide body.vertical-content-menu .main-menu {
+    width : 260px;
+  }
+  body.vertical-content-menu .navbar .navbar-header {
+    width : 260px;
+  }
+  body.vertical-content-menu .content-body {
+    margin-right : 288px;
+    -webkit-transition : 300ms ease all;
+            transition : 300ms ease all;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body.vertical-content-menu .main-menu, body.vertical-content-menu .vertical-overlay-menu.menu-hide .main-menu, .vertical-overlay-menu.menu-hide body.vertical-content-menu .main-menu {
+    width : 70px;
+  }
+  body.vertical-content-menu .navbar .navbar-header {
+    width : 70px;
+  }
+  body.vertical-content-menu .content-body {
+    margin-right : 95px;
+    -webkit-transition : 300ms ease all;
+            transition : 300ms ease all;
+  }
+  body.vertical-overlay-menu[data-menu='vertical-content-menu'].boxed-layout .main-menu.menu-fixed {
+    top : 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body.vertical-content-menu .content-body {
+    margin-right : 0 !important;
+  }
+  html.loading .main-menu, html.loading .vertical-overlay-menu.menu-hide .main-menu, .vertical-overlay-menu.menu-hide html.loading .main-menu {
+    opacity : 0;
+    -webkit-transform : translate3d(0px, 0, 0);
+            transform : translate3d(0px, 0, 0);
+  }
+}
+
+.material-vertical-layout.menu-collapsed .main-menu.menu-light, .material-vertical-layout.menu-collapsed .main-menu.menu-static {
+  -webkit-transition : none !important;
+          transition : none !important;
+}
+.material-vertical-layout.menu-collapsed .main-menu.menu-light .user-profile .user-img, .material-vertical-layout.menu-collapsed .main-menu.menu-static .user-profile .user-img {
+  width : 75% !important;
+}
+.material-vertical-layout.menu-collapsed .main-menu.menu-light .user-profile .dropdown-toggle, .material-vertical-layout.menu-collapsed .main-menu.menu-static .user-profile .dropdown-toggle {
+  margin-right : 0 !important;
+}
+.material-vertical-layout.menu-collapsed .main-menu.menu-light .user-profile div.text-light, .material-vertical-layout.menu-collapsed .main-menu.menu-light .user-profile .user-name, .material-vertical-layout.menu-collapsed .main-menu.menu-static .user-profile div.text-light, .material-vertical-layout.menu-collapsed .main-menu.menu-static .user-profile .user-name {
+  white-space : nowrap;
+  display : none;
+}
+.material-vertical-layout.menu-collapsed .main-menu.menu-light.expanded .user-profile .user-img, .material-vertical-layout.menu-collapsed .main-menu.menu-static.expanded .user-profile .user-img {
+  width : 25% !important;
+}
+.material-vertical-layout.menu-collapsed .main-menu.menu-light.expanded .user-profile div.text-light, .material-vertical-layout.menu-collapsed .main-menu.menu-light.expanded .user-profile .name-wrapper, .material-vertical-layout.menu-collapsed .main-menu.menu-static.expanded .user-profile div.text-light, .material-vertical-layout.menu-collapsed .main-menu.menu-static.expanded .user-profile .name-wrapper {
+  white-space : nowrap;
+  display : block;
+}
+.material-vertical-layout.menu-collapsed .main-menu.menu-light.expanded .user-profile .user-name, .material-vertical-layout.menu-collapsed .main-menu.menu-static.expanded .user-profile .user-name {
+  white-space : nowrap;
+  display : inline-block;
+}
+
+.material-vertical-layout .main-menu .user-profile {
+  background-size : cover;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .user-img {
+  border : 3px solid #FFFFFF;
+  width : 60px;
+  margin-bottom : 0.5rem;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .dropdown-toggle:after {
+  position : relative;
+  top : -1px;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .dropdown-menu.arrow {
+  margin-top : 0.5rem;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .dropdown-menu:before {
+  background : transparent;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .dropdown-menu .dropdown-item .material-icons {
+  font-size : 1.2rem;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .dropdown-menu .dropdown-item span.align-middle {
+  font-size : 1rem;
+}
+
+.material-vertical-layout .main-menu .main-menu-content .navigation li.active > a {
+  background : #673AB7 !important;
+  color : #FFFFFF;
+}
+
+.material-vertical-layout .main-menu .main-menu-content .navigation li.active.open > a {
+  margin-bottom : 0.25rem;
+}
+
+.material-vertical-layout .main-menu.menu-light {
+  border-left : 0;
+}
+.material-vertical-layout .main-menu.menu-light .user-profile {
+  background : url('../../../../../app-assets/images/gallery/left-menu-bg.jpg') center center no-repeat;
+}
+
+.material-vertical-layout .main-menu.menu-dark .user-profile {
+  background : url('../../../../../app-assets/images/gallery/dark-menu.jpg') center center no-repeat;
+}
+.material-vertical-layout .main-menu.menu-dark .user-profile .user-info {
+  background-color : rgba(0, 0, 0, 0.35);
+}
+.material-vertical-layout .main-menu.menu-dark .user-profile .user-info .dropdown-menu .dropdown-item .material-icons, .material-vertical-layout .main-menu.menu-dark .user-profile .user-info .dropdown-menu .dropdown-item span.align-middle {
+  color : #6B6F82;
+}
+
+.material-vertical-layout.vertical-compact-menu .main-menu.menu-light {
+  border-left : 1px solid #E4E7ED;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .material-vertical-layout .form-control, .material-horizontal-layout .form-control {
+    padding : 0.75rem;
+    min-height : 40px;
+  }
+  .material-vertical-layout .has-icon-left .form-control, .material-horizontal-layout .has-icon-left .form-control {
+    padding : 0.75rem 2rem;
+    min-height : 40px;
+  }
+}
+
+.material-vertical-layout.vertical-content-menu .main-menu .navigation > li > a i {
+  position : relative;
+  top : 0.7rem;
+}
+.material-vertical-layout.vertical-content-menu .main-menu .navigation > li > a i.material-icons {
+  font-size : 1.6rem;
+}
+
+.material-vertical-layout.vertical-content-menu.menu-collapsed .main-menu .navigation > li > a i {
+  position : relative;
+  top : -0.3rem;
+}
+.material-vertical-layout.vertical-content-menu.menu-collapsed .main-menu .navigation > li > a i.material-icons {
+  font-size : 1.6rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .material-vertical-layout.vertical-content-menu .main-menu .navigation > li > a i.material-icons {
+    font-size : 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 992px) {
+  .material-vertical-layout.vertical-content-menu .header-navbar .navbar-container ul.nav a.nav-link-expand {
+    padding : 1.7rem 0.3rem;
+  }
+  .material-vertical-layout.vertical-content-menu .header-navbar .navbar-container ul.nav .mega-dropdown .dropdown-toggle {
+    padding : 1.9rem 0.5rem;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body.vertical-layout.vertical-content-menu.menu-collapsed .main-menu .main-menu-content > span.menu-title, body.vertical-layout.vertical-content-menu.menu-collapsed .main-menu .main-menu-content a.menu-title {
+    left : auto;
+    right : 60px;
+    margin-right : 2.75rem;
+    margin-top : 2.2rem;
+  }
+  body.vertical-layout.vertical-content-menu.menu-collapsed .main-menu .main-menu-content > ul.menu-content {
+    right : 60px;
+    margin-right : 2.75rem;
+    margin-top : 2.2rem;
+  }
+}
+
+/*=========================================================================================
+	File Name: vertical-overlay-menu.scss
+	Description: A overlay style vertical menu with show and hide support. It support
+	light & dark version, filpped layout, right side icons, native scroll and borders menu
+	item seperation.
+	----------------------------------------------------------------------------------------
+	Item Name: Modern Admin - Clean Bootstrap 4 Dashboard HTML Template
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+==========================================================================================*/
+.vertical-overlay-menu .content {
+  margin-right : 0;
+}
+
+.vertical-overlay-menu .navbar .navbar-header {
+  float : right;
+  width : 280px;
+}
+
+.vertical-overlay-menu .navbar.navbar-brand-center .navbar-container {
+  margin-right : auto;
+}
+
+.vertical-overlay-menu .navbar.navbar-brand-center .navbar-header {
+  float : right;
+  width : auto;
+}
+
+.vertical-overlay-menu .main-menu, .vertical-overlay-menu.menu-hide .main-menu {
+  opacity : 0;
+  -webkit-transform : translate3d(0, 0, 0);
+          transform : translate3d(0, 0, 0);
+  -webkit-transition : width 0.25s, opacity 0.25s, -webkit-transform 0.25s;
+          transition : width 0.25s, opacity 0.25s, -webkit-transform 0.25s;
+          transition : width 0.25s, opacity 0.25s, transform 0.25s;
+          transition : width 0.25s, opacity 0.25s, transform 0.25s, -webkit-transform 0.25s;
+  width : 280px;
+  right : -280px;
+}
+.vertical-overlay-menu .main-menu.menu-fixed {
+  height : calc(100% - 5rem);
+}
+.vertical-overlay-menu .main-menu.menu-fixed .main-menu-content {
+  height : calc(100% - 12rem) !important;
+  position : relative;
+  padding-top : 3px;
+}
+.vertical-overlay-menu .main-menu.material-menu .main-menu-content .navigation li.active > a {
+  border : none;
+}
+.vertical-overlay-menu .main-menu .navigation .navigation-header {
+  padding-right : 34px;
+}
+.vertical-overlay-menu .main-menu .navigation .navigation-header .ft-minus, .vertical-overlay-menu .main-menu .navigation .navigation-header .nav-menu-icon {
+  display : none;
+}
+.vertical-overlay-menu .main-menu .navigation > li > a {
+  padding-right : 32px;
+}
+.vertical-overlay-menu .main-menu .navigation > li > a > i {
+  font-size : 1.6rem;
+  margin-left : 12px;
+  float : right;
+}
+.vertical-overlay-menu .main-menu .navigation > li > a > i:before {
+  -webkit-transition : 200ms ease all;
+          transition : 200ms ease all;
+}
+.vertical-overlay-menu .main-menu .navigation > li > a span.badge {
+  left : 26px !important;
+}
+.vertical-overlay-menu .main-menu .navigation > li.hover > a {
+  padding-right : 28px;
+}
+.vertical-overlay-menu .main-menu .navigation > li ul li > a {
+  padding-right : 68px;
+}
+.vertical-overlay-menu .main-menu .navigation > li .active > a {
+  padding-right : 54px;
+}
+.vertical-overlay-menu .main-menu .navigation > li ul .open > ul li > a {
+  padding-right : 74px;
+}
+.vertical-overlay-menu .main-menu .navigation > li ul .open > ul li:not(.active):hover > a {
+  padding-right : 78px;
+}
+.vertical-overlay-menu .main-menu .navigation > li.open > ul > li:hover > a {
+  padding-right : 72px;
+}
+.vertical-overlay-menu .main-menu .navigation > li.open > ul > li:hover.active > a {
+  padding-right : 54px;
+}
+.vertical-overlay-menu .main-menu .navigation li.has-sub > a:not(.mm-next):after {
+  content : '\f112';
+  font-family : 'LineAwesome';
+  font-size : 1rem;
+  display : inline-block;
+  position : absolute;
+  left : 20px;
+  top : 13px;
+  -webkit-transform : rotate(0deg);
+      -ms-transform : rotate(0deg);
+          transform : rotate(0deg);
+  transition : -webkit-transform 0.2s ease-in-out;
+}
+.vertical-overlay-menu .main-menu .navigation li.has-sub .has-sub > a:not(.mm-next):after {
+  top : 11px;
+}
+.vertical-overlay-menu .main-menu .navigation li.open > a:not(.mm-next):after {
+  -webkit-transform : rotate(-90deg);
+      -ms-transform : rotate(-90deg);
+          transform : rotate(-90deg);
+}
+.vertical-overlay-menu .main-menu .navigation li.has-sub > a:not(.mm-next):after {
+  left : 28px;
+  top : 13px;
+}
+
+.vertical-overlay-menu.menu-open .main-menu {
+  opacity : 1;
+  -webkit-transform : translate3d(-280px, 0, 0);
+          transform : translate3d(-280px, 0, 0);
+  -webkit-transition : width 0.25s, opacity 0.25s, -webkit-transform 0.25s;
+          transition : width 0.25s, opacity 0.25s, -webkit-transform 0.25s;
+          transition : width 0.25s, opacity 0.25s, transform 0.25s;
+          transition : width 0.25s, opacity 0.25s, transform 0.25s, -webkit-transform 0.25s;
+}
+
+.vertical-overlay-menu.menu-flipped .main-menu {
+  left : -280px;
+  right : inherit;
+}
+
+.vertical-overlay-menu.menu-flipped .navbar .navbar-container {
+  margin : 0;
+  margin-left : 280px;
+}
+
+.vertical-overlay-menu.menu-flipped .navbar .navbar-header {
+  float : left;
+}
+
+.vertical-overlay-menu.menu-flipped.menu-open .main-menu {
+  -webkit-transform : translate3d(280px, 0, 0);
+          transform : translate3d(280px, 0, 0);
+}
+
+.vertical-overlay-menu footer.footer.fixed-bottom {
+  z-index : 999;
+}
+
+.vertical-overlay-menu.boxed-layout.menu-open .main-menu {
+  -webkit-transform : translate3d(-280px, 0, 0) !important;
+          transform : translate3d(-280px, 0, 0) !important;
+}
+
+.vertical-overlay-menu.boxed-layout {
+  position : relative;
+}
+.vertical-overlay-menu.boxed-layout .main-menu.menu-fixed {
+  position : absolute;
+}
+
+@media screen and (max-width: 575px) {
+  .vertical-overlay-menu.boxed-layout.menu-open .main-menu {
+    -webkit-transform : translate3d(-280px, 0, 0) !important;
+            transform : translate3d(-280px, 0, 0) !important;
+  }
+}
+
+.material-vertical-layout .main-menu .user-profile {
+  background-size : cover;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .user-img {
+  border : 3px solid #FFFFFF;
+  width : 60px;
+  margin-bottom : 0.5rem;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .dropdown-toggle:after {
+  position : relative;
+  top : -1px;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .dropdown-menu.arrow {
+  margin-top : 0.5rem;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .dropdown-menu:before {
+  background : transparent;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .dropdown-menu .dropdown-item .material-icons {
+  font-size : 1.2rem;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .dropdown-menu .dropdown-item span.align-middle {
+  font-size : 1rem;
+}
+
+.material-vertical-layout .main-menu .main-menu-content .navigation li.active > a {
+  background : #673AB7 !important;
+  color : #FFFFFF;
+}
+
+.material-vertical-layout .main-menu .main-menu-content .navigation li.active.open > a {
+  margin-bottom : 0.25rem;
+}
+
+.material-vertical-layout .main-menu.menu-light {
+  border-left : 0;
+}
+.material-vertical-layout .main-menu.menu-light .user-profile {
+  background : url('../../../../../app-assets/images/gallery/left-menu-bg.jpg') center center no-repeat;
+}
+
+.material-vertical-layout .main-menu.menu-dark .user-profile {
+  background : url('../../../../../app-assets/images/gallery/dark-menu.jpg') center center no-repeat;
+}
+.material-vertical-layout .main-menu.menu-dark .user-profile .user-info {
+  background-color : rgba(0, 0, 0, 0.35);
+}
+.material-vertical-layout .main-menu.menu-dark .user-profile .user-info .dropdown-menu .dropdown-item .material-icons, .material-vertical-layout .main-menu.menu-dark .user-profile .user-info .dropdown-menu .dropdown-item span.align-middle {
+  color : #6B6F82;
+}
+
+.material-vertical-layout.vertical-compact-menu .main-menu.menu-light {
+  border-left : 1px solid #E4E7ED;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .material-vertical-layout .form-control, .material-horizontal-layout .form-control {
+    padding : 0.75rem;
+    min-height : 40px;
+  }
+  .material-vertical-layout .has-icon-left .form-control, .material-horizontal-layout .has-icon-left .form-control {
+    padding : 0.75rem 2rem;
+    min-height : 40px;
+  }
+}
+
+.material-vertical-layout.vertical-overlay-menu .main-menu .navigation > li > a i {
+  position : relative;
+  top : 0.7rem;
+}
+.material-vertical-layout.vertical-overlay-menu .main-menu .navigation > li > a i.material-icons {
+  font-size : 1.5rem;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity : 0;
+  }
+  to {
+    opacity : 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity : 0;
+  }
+  to {
+    opacity : 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity : 0;
+  }
+  to {
+    opacity : 1;
+  }
+}

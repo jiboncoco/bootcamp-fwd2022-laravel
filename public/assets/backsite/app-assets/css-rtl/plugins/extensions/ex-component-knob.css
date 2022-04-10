@@ -1,0 +1,14 @@
+.superpose-clock-hour {
+  right : 10px;
+  top : 10px;
+}
+
+.superpose-clock-minute {
+  right : 50px;
+  top : 50px;
+}
+
+.superpose-clock-second {
+  right : 85px;
+  top : 85px;
+}

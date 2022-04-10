@@ -1,0 +1,49 @@
+.trading-wrapper.table tr td {
+  padding: 0.75rem 0.75rem;
+  width: 100%; }
+
+.trading-wrapper.table tr:last-child td {
+  border-bottom: none !important; }
+
+.trading-wrapper.dataTable td {
+  border-top: none; }
+
+.trading-wrapper i:before {
+  font-size: 1.4rem;
+  margin-right: 0.5rem; }
+
+@media only screen and (max-width: 767px) {
+  .trading-wrapper i {
+    display: none; } }
+
+@media only screen and (max-width: 1139px) {
+  .trading-wrapper i:before {
+    font-size: 1.0rem;
+    margin-right: 0.2rem; }
+  .trading-wrapper.dataTables_wrapper .dataTables_filter {
+    display: none; } }
+
+.trading-wrapper tr:hover, .trading-wrapper tr.active {
+  cursor: pointer;
+  background-color: #1e9ff2;
+  color: #fff; }
+  .trading-wrapper tr:hover i, .trading-wrapper tr.active i {
+    color: #fff !important; }
+
+.open-orders i, .yrtrade-wrapper i {
+  font-size: 1.0rem;
+  margin-right: 0.4rem; }
+
+.open-orders.table tr:last-child td, .yrtrade-wrapper.table tr:last-child td {
+  border-bottom: none !important; }
+
+.open-orders.dataTable td, .yrtrade-wrapper.dataTable td {
+  border-top: none; }
+
+.dataTables_wrapper .dataTables_filter {
+  float: right;
+  margin-right: 1rem; }
+
+@media only screen and (max-width: 1139px) {
+  .dataTables_wrapper .dataTables_filter {
+    display: none; } }

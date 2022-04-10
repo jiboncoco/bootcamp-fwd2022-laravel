@@ -1,0 +1,8 @@
+#add-patient .option-y {
+  padding-left : 5px;
+}
+
+#add-patient .option-n {
+  margin-right : 5px;
+  padding-left : 5px;
+}

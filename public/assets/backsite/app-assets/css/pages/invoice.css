@@ -1,0 +1,27 @@
+@media print {
+  .content-header,
+  .buy-now,
+  .btn-print,
+  .footer,
+  .open,
+  .main-menu {
+    display: none; }
+  #invoice-template,
+  .content-wrapper {
+    padding-top: 0; }
+  .app-content,
+  #invoice-template,
+  .navbar-container,
+  .navbar-wrapper,
+  .header-navbar {
+    margin: 0 !important;
+    padding: 0 !important; }
+  #invoice-footer {
+    position: relative;
+    top: -80px !important; }
+  .table-responsive {
+    -ms-overflow-style: none; } }
+
+@page {
+  size: auto;
+  margin: 0px; }

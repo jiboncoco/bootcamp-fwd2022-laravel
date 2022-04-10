@@ -1,0 +1,390 @@
+/*=========================================================================================
+	File Name: horizontal-menu.scss
+	Description: A classic horizontal menu for easy navingation & support all devices.
+	It support light & dark version, filpped layout, right side icons, borders menu for
+	item seperation.
+	----------------------------------------------------------------------------------------
+	Item Name: Modern Admin - Clean Bootstrap 4 Dashboard HTML Template
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+==========================================================================================*/
+.horizontal-menu .navbar-horizontal .nav-item i {
+  font-size : 1.6rem;
+  margin-left : 0.5rem;
+  position : relative;
+  top : -2px;
+}
+
+.horizontal-menu .navbar-horizontal .nav-item a span {
+  font-size : 1.1rem;
+}
+
+.horizontal-menu .navbar-horizontal.navbar-icon-right .nav-item i {
+  top : 4px;
+}
+
+.horizontal-menu .header-navbar .navbar-container {
+  height : auto;
+}
+
+.horizontal-menu .navbar-horizontal ul#main-menu-navigation > li > a {
+  padding : 1.8rem 1rem;
+}
+
+.horizontal-menu #main-menu-navigation ul li a span {
+  -webkit-transition : all 0.2s ease;
+          transition : all 0.2s ease;
+  display : inline-block;
+}
+.horizontal-menu #main-menu-navigation ul li a span:hover, .horizontal-menu #main-menu-navigation ul li a span .hover {
+  -webkit-transform : translateX(-4px);
+      -ms-transform : translateX(-4px);
+          transform : translateX(-4px);
+}
+
+.horizontal-menu.menu-collapsed .navbar-horizontal .nav-item i {
+  margin-left : 0;
+}
+
+.horizontal-menu.menu-collapsed #main-menu-navigation .nav-item > a > span {
+  display : none;
+}
+
+.horizontal-menu .navigation-header {
+  font-family : inherit;
+  color : #929292;
+  padding : 8px 20px;
+  font-size : 1rem;
+}
+
+.horizontal-menu .navbar-flipped .navbar-nav .nav-item {
+  float : left;
+}
+
+.horizontal-menu .navbar-light ul#main-menu-navigation > li.active > a {
+  border-bottom : 1px solid #00BCD4;
+  background : #FFFFFF;
+}
+
+.horizontal-menu .navbar-light .active > a {
+  background : whitesmoke;
+  font-weight : 500;
+}
+
+.horizontal-menu .navbar-dark .nav-item.active > a {
+  background-color : rgba(255, 255, 255, 0.05);
+}
+
+.horizontal-menu .navbar-dark .nav-item:hover, .horizontal-menu .navbar-dark .nav-item .hover {
+  background-color : rgba(255, 255, 255, 0.05);
+}
+
+.horizontal-menu .navbar-dark .active > a {
+  background : whitesmoke;
+  font-weight : 500;
+}
+
+.horizontal-menu[data-col='content-left-sidebar'] .sticky-wrapper {
+  float : none;
+}
+
+.material-horizontal-layout .header-navbar .navbar-container .dropdown-menu .dropdown-submenu .dropdown-item.dropdown-toggle {
+  padding-left : 2.5rem;
+}
+
+.material-horizontal-layout .main-menu .navigation > li > a i, .material-horizontal-nav .main-menu .navigation > li > a i {
+  position : relative;
+  top : 8px;
+}
+.material-horizontal-layout .main-menu .navigation > li > a i.material-icons, .material-horizontal-nav .main-menu .navigation > li > a i.material-icons {
+  font-size : 1.3rem;
+}
+
+.material-horizontal-layout .main-menu .navigation > li > ul > li > a i.material-icons, .material-horizontal-nav .main-menu .navigation > li > ul > li > a i.material-icons {
+  font-size : 1.3rem;
+  margin-left : 0.5rem;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+  .material-horizontal-layout .navbar-with-menu.navbar-brand-center .navbar-wrapper .navbar-container .collapse .nav .nav-link-expand, .material-horizontal-layout .navbar-with-menu.navbar-brand-center .navbar-wrapper .navbar-container .collapse .nav .mega-dropdown .dropdown-toggle {
+    padding-left : 0rem;
+    padding-right : 0rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .material-horizontal-layout .container {
+    padding : 0 1.25rem;
+  }
+}
+
+/*=========================================================================================
+	File Name: vertical-overlay-menu.scss
+	Description: A overlay style vertical menu with show and hide support. It support
+	light & dark version, filpped layout, right side icons, native scroll and borders menu
+	item seperation.
+	----------------------------------------------------------------------------------------
+	Item Name: Modern Admin - Clean Bootstrap 4 Dashboard HTML Template
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+==========================================================================================*/
+.vertical-overlay-menu .content {
+  margin-right : 0;
+}
+
+.vertical-overlay-menu .navbar .navbar-header {
+  float : right;
+  width : 280px;
+}
+
+.vertical-overlay-menu .navbar.navbar-brand-center .navbar-container {
+  margin-right : auto;
+}
+
+.vertical-overlay-menu .navbar.navbar-brand-center .navbar-header {
+  float : right;
+  width : auto;
+}
+
+.vertical-overlay-menu .main-menu, .vertical-overlay-menu.menu-hide .main-menu {
+  opacity : 0;
+  -webkit-transform : translate3d(0, 0, 0);
+          transform : translate3d(0, 0, 0);
+  -webkit-transition : width 0.25s, opacity 0.25s, -webkit-transform 0.25s;
+          transition : width 0.25s, opacity 0.25s, -webkit-transform 0.25s;
+          transition : width 0.25s, opacity 0.25s, transform 0.25s;
+          transition : width 0.25s, opacity 0.25s, transform 0.25s, -webkit-transform 0.25s;
+  width : 280px;
+  right : -280px;
+}
+.vertical-overlay-menu .main-menu.menu-fixed {
+  height : calc(100% - 5rem);
+}
+.vertical-overlay-menu .main-menu.menu-fixed .main-menu-content {
+  height : calc(100% - 12rem) !important;
+  position : relative;
+  padding-top : 3px;
+}
+.vertical-overlay-menu .main-menu.material-menu .main-menu-content .navigation li.active > a {
+  border : none;
+}
+.vertical-overlay-menu .main-menu .navigation .navigation-header {
+  padding-right : 34px;
+}
+.vertical-overlay-menu .main-menu .navigation .navigation-header .ft-minus, .vertical-overlay-menu .main-menu .navigation .navigation-header .nav-menu-icon {
+  display : none;
+}
+.vertical-overlay-menu .main-menu .navigation > li > a {
+  padding-right : 32px;
+}
+.vertical-overlay-menu .main-menu .navigation > li > a > i {
+  font-size : 1.6rem;
+  margin-left : 12px;
+  float : right;
+}
+.vertical-overlay-menu .main-menu .navigation > li > a > i:before {
+  -webkit-transition : 200ms ease all;
+          transition : 200ms ease all;
+}
+.vertical-overlay-menu .main-menu .navigation > li > a span.badge {
+  left : 26px !important;
+}
+.vertical-overlay-menu .main-menu .navigation > li.hover > a {
+  padding-right : 28px;
+}
+.vertical-overlay-menu .main-menu .navigation > li ul li > a {
+  padding-right : 68px;
+}
+.vertical-overlay-menu .main-menu .navigation > li .active > a {
+  padding-right : 54px;
+}
+.vertical-overlay-menu .main-menu .navigation > li ul .open > ul li > a {
+  padding-right : 74px;
+}
+.vertical-overlay-menu .main-menu .navigation > li ul .open > ul li:not(.active):hover > a {
+  padding-right : 78px;
+}
+.vertical-overlay-menu .main-menu .navigation > li.open > ul > li:hover > a {
+  padding-right : 72px;
+}
+.vertical-overlay-menu .main-menu .navigation > li.open > ul > li:hover.active > a {
+  padding-right : 54px;
+}
+.vertical-overlay-menu .main-menu .navigation li.has-sub > a:not(.mm-next):after {
+  content : '\f112';
+  font-family : 'LineAwesome';
+  font-size : 1rem;
+  display : inline-block;
+  position : absolute;
+  left : 20px;
+  top : 13px;
+  -webkit-transform : rotate(0deg);
+      -ms-transform : rotate(0deg);
+          transform : rotate(0deg);
+  transition : -webkit-transform 0.2s ease-in-out;
+}
+.vertical-overlay-menu .main-menu .navigation li.has-sub .has-sub > a:not(.mm-next):after {
+  top : 11px;
+}
+.vertical-overlay-menu .main-menu .navigation li.open > a:not(.mm-next):after {
+  -webkit-transform : rotate(-90deg);
+      -ms-transform : rotate(-90deg);
+          transform : rotate(-90deg);
+}
+.vertical-overlay-menu .main-menu .navigation li.has-sub > a:not(.mm-next):after {
+  left : 28px;
+  top : 13px;
+}
+
+.vertical-overlay-menu.menu-open .main-menu {
+  opacity : 1;
+  -webkit-transform : translate3d(-280px, 0, 0);
+          transform : translate3d(-280px, 0, 0);
+  -webkit-transition : width 0.25s, opacity 0.25s, -webkit-transform 0.25s;
+          transition : width 0.25s, opacity 0.25s, -webkit-transform 0.25s;
+          transition : width 0.25s, opacity 0.25s, transform 0.25s;
+          transition : width 0.25s, opacity 0.25s, transform 0.25s, -webkit-transform 0.25s;
+}
+
+.vertical-overlay-menu.menu-flipped .main-menu {
+  left : -280px;
+  right : inherit;
+}
+
+.vertical-overlay-menu.menu-flipped .navbar .navbar-container {
+  margin : 0;
+  margin-left : 280px;
+}
+
+.vertical-overlay-menu.menu-flipped .navbar .navbar-header {
+  float : left;
+}
+
+.vertical-overlay-menu.menu-flipped.menu-open .main-menu {
+  -webkit-transform : translate3d(280px, 0, 0);
+          transform : translate3d(280px, 0, 0);
+}
+
+.vertical-overlay-menu footer.footer.fixed-bottom {
+  z-index : 999;
+}
+
+.vertical-overlay-menu.boxed-layout.menu-open .main-menu {
+  -webkit-transform : translate3d(-280px, 0, 0) !important;
+          transform : translate3d(-280px, 0, 0) !important;
+}
+
+.vertical-overlay-menu.boxed-layout {
+  position : relative;
+}
+.vertical-overlay-menu.boxed-layout .main-menu.menu-fixed {
+  position : absolute;
+}
+
+@media screen and (max-width: 575px) {
+  .vertical-overlay-menu.boxed-layout.menu-open .main-menu {
+    -webkit-transform : translate3d(-280px, 0, 0) !important;
+            transform : translate3d(-280px, 0, 0) !important;
+  }
+}
+
+.material-vertical-layout .main-menu .user-profile {
+  background-size : cover;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .user-img {
+  border : 3px solid #FFFFFF;
+  width : 60px;
+  margin-bottom : 0.5rem;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .dropdown-toggle:after {
+  position : relative;
+  top : -1px;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .dropdown-menu.arrow {
+  margin-top : 0.5rem;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .dropdown-menu:before {
+  background : transparent;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .dropdown-menu .dropdown-item .material-icons {
+  font-size : 1.2rem;
+}
+.material-vertical-layout .main-menu .user-profile .user-info .dropdown-menu .dropdown-item span.align-middle {
+  font-size : 1rem;
+}
+
+.material-vertical-layout .main-menu .main-menu-content .navigation li.active > a {
+  background : #673AB7 !important;
+  color : #FFFFFF;
+}
+
+.material-vertical-layout .main-menu .main-menu-content .navigation li.active.open > a {
+  margin-bottom : 0.25rem;
+}
+
+.material-vertical-layout .main-menu.menu-light {
+  border-left : 0;
+}
+.material-vertical-layout .main-menu.menu-light .user-profile {
+  background : url('../../../../../app-assets/images/gallery/left-menu-bg.jpg') center center no-repeat;
+}
+
+.material-vertical-layout .main-menu.menu-dark .user-profile {
+  background : url('../../../../../app-assets/images/gallery/dark-menu.jpg') center center no-repeat;
+}
+.material-vertical-layout .main-menu.menu-dark .user-profile .user-info {
+  background-color : rgba(0, 0, 0, 0.35);
+}
+.material-vertical-layout .main-menu.menu-dark .user-profile .user-info .dropdown-menu .dropdown-item .material-icons, .material-vertical-layout .main-menu.menu-dark .user-profile .user-info .dropdown-menu .dropdown-item span.align-middle {
+  color : #6B6F82;
+}
+
+.material-vertical-layout.vertical-compact-menu .main-menu.menu-light {
+  border-left : 1px solid #E4E7ED;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .material-vertical-layout .form-control, .material-horizontal-layout .form-control {
+    padding : 0.75rem;
+    min-height : 40px;
+  }
+  .material-vertical-layout .has-icon-left .form-control, .material-horizontal-layout .has-icon-left .form-control {
+    padding : 0.75rem 2rem;
+    min-height : 40px;
+  }
+}
+
+.material-vertical-layout.vertical-overlay-menu .main-menu .navigation > li > a i {
+  position : relative;
+  top : 0.7rem;
+}
+.material-vertical-layout.vertical-overlay-menu .main-menu .navigation > li > a i.material-icons {
+  font-size : 1.5rem;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity : 0;
+  }
+  to {
+    opacity : 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity : 0;
+  }
+  to {
+    opacity : 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity : 0;
+  }
+  to {
+    opacity : 1;
+  }
+}

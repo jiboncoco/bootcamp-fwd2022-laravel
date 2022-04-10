@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mobirise Icons</title>
+        <style>
+            .instuction {
+                font-family: sans-serif, Arial;
+                display: block;
+                margin: 0 auto;
+                max-width: 768px;
+                width: 100%;
+                padding: 0 10px;
+                color: #222;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            .instuction textarea {
+                font-size: 0.9em;
+                min-height: 30px;
+                padding: 10px;
+                padding-right: 0px;
+                overflow: auto;
+                max-width: 100%;
+                width: 100%;
+            }
+            .note {padding-top:25px;}
+            .note h3 {color:#1565C0;}
+            a {
+                color:#03A9F4;
+                font-weight: bold;
+            }
+            a:visited { color:#7E57C2;}
+            .footer {
+                padding-top: 100px;
+                text-align: center;
+            }
+            .p {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            .highlighted {
+                background-color: #F5F5F5; 
+                padding-left:15px; 
+                padding-top:10px;
+                padding-bottom:10px; 
+                border-left: .25rem solid #1565C0;
+            }        
+        </style>
+        
+    </head>
+
+<body>
+    <div class="instuction">
+        
+        
+        <h1>Mobirise Icons</h1>
+        <p><a href="https://mobiriseicons.com/">MobiriseIcons</a> - 150 webdev icons in SVG and iconfont format.  16/24/30px grid versions, 6 categories. Open-source and free under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons license</a>. 
+            Made by <a href ="https://mobirise.com">Mobirise</a>.</p>
+    <p>Find the instruction on how to use the iconfont <a href="https://mobiriseicons.com/index.html#text1-z">here</a>.</p>
+    <p>View the <a href="https://mobiriseicons.com/cheatsheet.html">cheatsheet</a> to view all icons included in the font.</p>
+    
+        <div class="note">
+            <h3>Adding the icon font to a page</h3>
+            <p>If you want to add some of the Mobirise icons to your page, install the font to your page first.</p>          
+            <p><b>1)</b> Put the <b>mobirise</b> folder to the same folder with your page. If you change the location of this folder, don't forget to correct the path to <b>style.css</b> file noted in code.</p>
+            <p><b>2)</b> Add a special style.css file to your page:</p>
+            <textarea onclick="this.select()">&lt;link rel="stylesheet" href="mobirise/style.css"&gt;</textarea>
+            <p class="highlighted">Please make sure that font files are available in the <b>mobirise/fonts</b> folder (mobirise.eot, mobirise.svg, mobirise.ttf, mobirise.woff).</p>   
+            <p><b>3)</b> Then you can use special classes to add icons to your page:</p>
+            <textarea>&lt;span class="mbri-hearth"&gt;&lt;/span&gt;</textarea>
+            <p>Also, there are special codes for icons, view the <a href="https://mobiriseicons.com/cheatsheet.html">cheatsheet</a> to learn more.</p>            
+        </div>
+    
+        <div class="note">
+            <h3>Using SVG icons</h3>
+            <p>Using iconfonts give some benefits, but also there are some limitations in modifying. CSS effects we can use for them are the same we use for text. Using SVG files can provide more possibilities, so we also provide .svg files.&nbsp;</p> 
+        </div>
+    
+        <div class="note">
+            <h3>Adding .svg file to pages</h3>
+            <p> You can simply use .svg files as images files.</p>
+            <textarea>&lt;img src="mbri-star.svg" alt="mbri-star"&gt;</textarea>
+        </div>
+        <div class="note">
+            <h3 class="styled mbr-editable-content">Adding SVG as an object</h3>
+            <p>It's considered as the best way to add SVG files to pages if you intend to modify your icons using CSS and scripts without placing them to HTML directly.</p>
+            <textarea>&lt;object type="image/svg+xml" data="star.svg"&gt;SVGs aren't supported.&lt;/object&gt;</textarea>
+        </div>
+    <div class="note">
+        <h3>Using "inline" SVG</h3> 
+        <p>You can use the code of your svg files. Open an .svg file using some text editor to learn its code.</p>
+        <textarea style="min-height: 100px;">&lt;svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M 12,0 C 11.80898,-0.00131698 11.637806,0.10630841 11.552734,0.27734375 L 8.15625,7.0703125 0.37890625,9.015625 C 0.02138515,9.104785 -0.12019317,9.5368611 0.11523438,9.8203125 L 4.9765625,15.654297 4.0039062,23.4375 c -0.050317,0.401757 0.3727673,0.693617 0.7304688,0.503906 L 12,20.066406 l 7.265625,3.875 c 0.357702,0.189711 0.780786,-0.102149 0.730469,-0.503906 L 19.023438,15.654297 23.884766,9.8203125 C 24.120194,9.536861 23.978615,9.1047849 23.621094,9.015625 L 15.84375,7.0703125 12.447266,0.27734375 C 12.36345,0.10882575 12.188204,0.00164408 12,0 Z m 0,1.6171875 3.052734,6.1054687 c 0.06527,0.1306969 0.184437,0.2263133 0.326172,0.2617188 l 7.226563,1.8066406 -4.490235,5.3886724 c -0.08857,0.106654 -0.128889,0.245293 -0.111328,0.382812 l 0.88086,7.042969 -6.650391,-3.546875 c -0.146573,-0.07777 -0.322177,-0.07777 -0.46875,0 L 5.1152344,22.605469 5.9960938,15.5625 C 6.0136552,15.424981 5.9733368,15.286342 5.8847656,15.179688 L 1.3945312,9.7910156 8.6210938,7.984375 C 8.7628285,7.9489695 8.8819922,7.853353 8.9472656,7.7226562 Z"/&gt;&lt;/svg&gt;</textarea>
+        <p>You can simply paste it to your HTML code.</p>
+        </div>
+
+
+<div class="footer">
+        
+
+                    <span>(c) 2016 <a href="https://mobiriseicons.com/" class="text-black">MobiriseIcons.com</a>,  developed by <a href="https://mobirise.com" class="text-black">Mobirise</a>, <a href="https://creativecommons.org/licenses/by/4.0/" class="text-black">CC BY 4.0. License</a></span>
+          
+
+
+</div>
+        </div>
+    
+    </body>
+</html>

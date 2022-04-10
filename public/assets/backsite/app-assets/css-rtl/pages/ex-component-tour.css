@@ -1,0 +1,45 @@
+.shepherd-element {
+  background : transparent;
+}
+.shepherd-element.shepherd-element-attached-right .shepherd-arrow {
+  border-right-color : #666EE8 !important;
+  border-bottom-color : transparent !important;
+}
+.shepherd-element .shepherd-arrow {
+  border-bottom-color : #666EE8 !important;
+}
+
+.tour-container {
+  font-size : 1rem;
+}
+.tour-container .shepherd-header {
+  background : transparent !important;
+}
+.tour-container .shepherd-header .shepherd-title {
+  color : #FFFFFF;
+}
+.tour-container.shadow-md .shepherd-content, .tour-container.bg-purple-dark .shepherd-content {
+  background-color : #666EE8 !important;
+  border-radius : 0.5rem;
+  padding : 10px;
+}
+.tour-container.shadow-md .shepherd-content .shepherd-text, .tour-container.bg-purple-dark .shepherd-content .shepherd-text {
+  color : #FFFFFF;
+}
+.tour-container.shadow-md .shepherd-content .shepherd-footer, .tour-container.bg-purple-dark .shepherd-content .shepherd-footer {
+  padding : 0 !important;
+  -webkit-box-pack : center;
+  -webkit-justify-content : center;
+  -ms-flex-pack : center;
+          justify-content : center;
+}
+.tour-container.shadow-md .shepherd-content .shepherd-footer .shepherd-button, .tour-container.bg-purple-dark .shepherd-content .shepherd-footer .shepherd-button {
+  margin : 0 5px;
+  border-radius : 6px;
+  color : #FFFFFF;
+  border : 1px solid #FFFFFF;
+  background-color : transparent;
+}
+.tour-container.shadow-md .shepherd-content .shepherd-footer .shepherd-button:hover, .tour-container.bg-purple-dark .shepherd-content .shepherd-footer .shepherd-button:hover {
+  background-color : #FFFFFF3B;
+}
