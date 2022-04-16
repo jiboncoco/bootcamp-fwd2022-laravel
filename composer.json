@@ -12,7 +12,8 @@
         "laravel/jetstream": "^2.6",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "livewire/livewire": "^2.5"
+        "livewire/livewire": "^2.5",
+        "realrashid/sweet-alert": "^5.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
