@@ -11,6 +11,10 @@ use App\Http\Controllers\Frontsite\PaymentController;
 use App\Http\Controllers\Backsite\DashboardController;
 use App\Http\Controllers\Backsite\TypeUserController;
 use App\Http\Controllers\Backsite\SpecialistController;
+use App\Http\Controllers\Backsite\ConfigPaymentController;
+use App\Http\Controllers\Backsite\ConsultationController;
+use App\Http\Controllers\Backsite\ReportAppointmentController;
+use App\Http\Controllers\Backsite\ReportTransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +48,18 @@ Route::group(['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => ['aut
 
     // specialits
     Route::resource('specialist', SpecialistController::class);
+
+    // config payment
+    Route::resource('config_payment', ConfigPaymentController::class);
+
+    // consultation
+    Route::resource('consultation', ConsultationController::class);
+
+    // report appointment
+    Route::resource('appointment', ReportAppointmentController::class);
+
+    // report transaction
+    Route::resource('transaction', ReportTransactionController::class);
 
 });
 
