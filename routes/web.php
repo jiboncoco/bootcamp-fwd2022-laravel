@@ -9,6 +9,9 @@ use App\Http\Controllers\Frontsite\PaymentController;
 
 // backsite
 use App\Http\Controllers\Backsite\DashboardController;
+use App\Http\Controllers\Backsite\PermissionController;
+use App\Http\Controllers\Backsite\RoleController;
+use App\Http\Controllers\Backsite\UserController;
 use App\Http\Controllers\Backsite\TypeUserController;
 use App\Http\Controllers\Backsite\SpecialistController;
 use App\Http\Controllers\Backsite\ConfigPaymentController;
@@ -42,6 +45,15 @@ Route::group(['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => ['aut
 
     // dashboard
     Route::resource('dashboard', DashboardController::class);
+
+    // permission
+    Route::resource('permission', PermissionController::class);
+
+    // role
+    Route::resource('role', RoleController::class);
+
+    // user
+    Route::resource('user', UserController::class);
 
     // type user
     Route::resource('type_user', TypeUserController::class);
