@@ -49,9 +49,10 @@ class UserController extends Controller
     public function index()
     {
         $user = User::orderBy('created_at', 'desc')->get();
+        $type_user = TypeUser::orderBy('name', 'asc')->get();
         $role = Role::all()->pluck('title', 'id');
 
-        return view('pages.backsite.management-access.user.index', compact('user', 'role'));
+        return view('pages.backsite.management-access.user.index', compact('user', 'role', 'type_user'));
     }
 
     /**
@@ -70,10 +71,10 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreUserRequest $request)
+    public function store(StoreUserRequest $request_user, Request $request)
     {
         // get all request from frontsite
-        $data = $request->all();
+        $data = $request_user->all();
 
         // hash password
         $data['password'] = Hash::make($data['password']);
@@ -82,7 +83,13 @@ class UserController extends Controller
         $user = User::create($data);
 
         // sync role by users select
-        $user->role()->sync($request->input('role', []));
+        $user->role()->sync($request_user->input('role', []));
+
+        // save to detail user , to set type user
+        $detail_user = new DetailUser;
+        $detail_user->user_id = $user['id'];
+        $detail_user->type_user_id = $request['type_user_id'];
+        $detail_user->save();
 
         alert()->success('Success Message', 'Successfully added new user');
         return redirect()->route('backsite.user.index');
@@ -110,9 +117,10 @@ class UserController extends Controller
     public function edit(User $user)
     {
         $role = Role::all()->pluck('title', 'id');
+        $type_user = TypeUser::orderBy('name', 'asc')->get();
         $user->load('role');
 
-        return view('pages.backsite.management-access.user.edit', compact('user', 'role'));
+        return view('pages.backsite.management-access.user.edit', compact('user', 'role', 'type_user'));
     }
 
     /**
@@ -122,16 +130,21 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUserRequest $request, User $user)
+    public function update(UpdateUserRequest $request_user, Request $request, User $user)
     {
         // get all request from frontsite
-        $data = $request->all();
+        $data = $request_user->all();
 
         // update to database
         $user->update($data);
 
         // update roles
-        $user->role()->sync($request->input('role', []));
+        $user->role()->sync($request_user->input('role', []));
+
+        // save to detail user , to set type user
+        $detail_user = DetailUser::find($user['id']);
+        $detail_user->type_user_id = $request['type_user_id'];
+        $detail_user->save();
 
         alert()->success('Success Message', 'Successfully updated user');
         return redirect()->route('backsite.user.index');
