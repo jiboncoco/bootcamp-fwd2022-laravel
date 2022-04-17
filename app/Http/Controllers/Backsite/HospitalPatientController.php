@@ -46,7 +46,7 @@ class HospitalPatientController extends Controller
                             })->orderBy('created_at', 'desc')
                             ->get();
 
-        return view('pages.backsite.operational.doctor.index', compact('hospital_patient'));
+        return view('pages.backsite.operational.hospital-patient.index', compact('hospital_patient'));
     }
 
     /**

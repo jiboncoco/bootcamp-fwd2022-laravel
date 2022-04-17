@@ -84,6 +84,7 @@ class RoleController extends Controller
      */
     public function show(Role $role)
     {
+        // need more notes here
         $role->load('permission');
 
         return view('pages.backsite.management-access.role.show', compact('role'));
@@ -97,6 +98,7 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
+        // need more notes here
         $permission = Permission::all();
         $role->load('permission');
 
@@ -112,6 +114,7 @@ class RoleController extends Controller
      */
     public function update(UpdateRoleRequest $request, Role $role)
     {
+        // need more notes here
         $role->update($request->all());
         $role->permission()->sync($request->input('permission', []));
 
@@ -127,6 +130,7 @@ class RoleController extends Controller
      */
     public function destroy(Role $role)
     {
+        // need more notes here
         $role->forceDelete();
 
         alert()->success('Success Message','Successfully deleted role');
