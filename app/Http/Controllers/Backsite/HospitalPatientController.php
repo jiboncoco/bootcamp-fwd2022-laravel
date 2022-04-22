@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpFoundation\Response;
 
 // use everything here
-// use Gate;
+use Gate;
 use Auth;
 
 // use model here
@@ -40,6 +40,8 @@ class HospitalPatientController extends Controller
      */
     public function index()
     {
+        abort_if(Gate::denies('hospital_patient_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
         // for table grid
         $hospital_patient = User::whereHas('detail_user', function (Builder $query) {
                                 $query->where('type_user_id', 3); // only load user type patient or id 3 in type user table

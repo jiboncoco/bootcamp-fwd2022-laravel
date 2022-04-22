@@ -19,7 +19,8 @@ class UpdateUserRequest extends FormRequest
      */
     public function authorize()
     {
-        // create middleware from Kernel at here
+        abort_if(Gate::denies('user_update'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
         return true;
     }
 

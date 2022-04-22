@@ -16,7 +16,8 @@ class StoreUserRequest extends FormRequest
      */
     public function authorize()
     {
-        // create middleware from Kernel at here
+        abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
         return true;
     }
 
