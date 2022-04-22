@@ -89,16 +89,6 @@
 @push('after-script')
 
     <script>
-        jQuery(document).ready(function($){
-            $('#mymodal').on('show.bs.modal', function(e){
-                var button = $(e.relatedTarget);
-                var modal = $(this);
-
-                modal.find('.modal-body').load(button.data("remote"));
-                modal.find('.modal-title').html(button.data("title"));
-            });
-        });
-
         $('.default-table').DataTable( {
             "order": [],
             "paging": true,
