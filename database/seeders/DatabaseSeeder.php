@@ -18,6 +18,12 @@ class DatabaseSeeder extends Seeder
             ConsultationSeeder::class,
             ConfigPaymentSeeder::class,
             SpecialistSeeder::class,
+            UserSeeder::class,
+            DetailUserSeeder::class,
+            PermissionSeeder::class,
+            RoleSeeder::class,
+            PermissionRoleSeeder::class,
+            RoleUserSeeder::class,
         ]);
     }
 }
