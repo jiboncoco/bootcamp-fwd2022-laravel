@@ -3,7 +3,7 @@
 namespace App\Http\Requests\Specialist;
 
 use App\Models\MasterData\Specialist;
-// use Gate;
+use Gate;
 use Illuminate\Foundation\Http\FormRequest;
 use Symfony\Component\HttpFoundation\Response;
 
