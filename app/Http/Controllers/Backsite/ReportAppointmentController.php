@@ -42,7 +42,7 @@ class ReportAppointmentController extends Controller
     {
         abort_if(Gate::denies('appointment_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $type_user_condition = Auth::user()->detail_user()->type_user_id;
+        $type_user_condition = Auth::user()->detail_user->type_user_id;
 
         if($type_user_condition == 1){
             // for admin
