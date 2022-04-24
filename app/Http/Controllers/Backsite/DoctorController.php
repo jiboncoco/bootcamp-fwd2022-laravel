@@ -81,15 +81,15 @@ class DoctorController extends Controller
         $data['fee'] = str_replace('IDR ', '', $data['fee']);
 
         // upload process here
-        // $path = public_path('app/public/assets/file-doctor');
-        // if(!File::isDirectory($path)){
-        //     $response = Storage::makeDirectory('public/assets/file-doctor');
-        // }
+        $path = public_path('app/public/assets/file-doctor');
+        if(!File::isDirectory($path)){
+            $response = Storage::makeDirectory('public/assets/file-doctor');
+        }
 
         // change file locations
         if(isset($data['photo'])){
             $data['photo'] = $request->file('photo')->store(
-                '', 'public'
+                'assets/file-doctor', 'public'
             );
         }else{
             $data['photo'] = "";
