@@ -83,6 +83,7 @@
                                                     <div class="form-group row {{ $errors->has('permissions') ? 'has-error' : '' }}">
                                                         <label class="col-md-3 label-control">Permission <code style="color:green;">optional</code></label>
                                                         <div class="col-md-9 mx-auto">
+
                                                             <label for="permission">
                                                                 <span class="btn btn-warning btn-sm select-all">{{ 'Select All' }}</span>
                                                                 <span class="btn btn-warning btn-sm deselect-all">{{ 'Deselect All' }}</span>
