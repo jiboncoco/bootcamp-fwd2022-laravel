@@ -89,7 +89,7 @@ class DoctorController extends Controller
         // change file locations
         if(isset($data['photo'])){
             $data['photo'] = $request->file('photo')->store(
-                'assets/file-doctor', 'public'
+                '', 'public'
             );
         }else{
             $data['photo'] = "";
