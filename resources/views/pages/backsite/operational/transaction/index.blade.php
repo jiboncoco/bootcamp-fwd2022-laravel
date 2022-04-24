@@ -68,6 +68,8 @@
                                                     <thead>
                                                         <tr>
                                                             <th>Date</th>
+                                                            <th>Doctor</th>
+                                                            <th>Patient</th>
                                                             <th>Fee Doctor</th>
                                                             <th>Fee Specialist</th>
                                                             <th>Fee Hospital</th>
@@ -80,6 +82,8 @@
                                                         @forelse($transaction as $key => $transaction_item)
                                                             <tr data-entry-id="{{ $transaction_item->id }}">
                                                                 <td>{{ isset($transaction_item->created_at) ? date("d/m/Y H:i:s",strtotime($transaction_item->created_at)) : '' }}</td>
+                                                                <td>{{ $transaction_item->appointment->doctor->name ?? '' }}</td>
+                                                                <td>{{ $transaction_item->appointment->user->name ?? '' }}</td>
                                                                 <td>{{ 'IDR '.number_format($transaction_item->fee_doctor) ?? '' }}</td>
                                                                 <td>{{ 'IDR '.number_format($transaction_item->fee_specialist) ?? '' }}</td>
                                                                 <td>{{ 'IDR '.number_format($transaction_item->fee_hospital) ?? '' }}</td>
@@ -94,6 +98,8 @@
                                                     <tfoot>
                                                         <tr>
                                                             <th>Date</th>
+                                                            <th>Doctor</th>
+                                                            <th>Patient</th>
                                                             <th>Fee Doctor</th>
                                                             <th>Fee Specialist</th>
                                                             <th>Fee Hospital</th>

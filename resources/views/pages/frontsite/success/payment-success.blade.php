@@ -16,7 +16,7 @@
                 <h2 class="text-[#1E2B4F] text-2xl font-semibold">Sukses Booking</h2>
                 <p class="text-[#AFAEC3] mt-4">Pastikan Anda tidak terlambat untuk
                 <br />mendapatkan konsultasi yang terbaik</p>
-                <a href="{{ route('backsite.dashboard') }}l" class="inline-block mt-10 bg-[#0D63F3] text-white rounded-full px-14 py-3">My Dashboard</a>
+                <a href="{{ route('backsite.dashboard.index') }}" class="inline-block mt-10 bg-[#0D63F3] text-white rounded-full px-14 py-3">My Dashboard</a>
             </div>
         </div>
     </div>
