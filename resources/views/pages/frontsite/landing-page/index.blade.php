@@ -80,34 +80,19 @@
                 <h3 class="text-2xl font-semibold">Popular Categories</h3>
                 <p class="text-[#A7B0B5] mt-2">Quick way to get your first experience</p>
 
-                <!-- Card -->
                 <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10 lg:gap-12 mt-10">
-                    <a href="#" class="bg-white py-6 px-5 rounded-2xl transition hover:ring-offset-2 hover:ring-2 hover:ring-[#0D63F3]">
-                        <h5 class="text-[#1E2B4F] text-lg font-semibold">Dermatology</h5>
-                        <p class="text-[#AFAEC3] mt-1">143 doctors</p>
-                    </a>
-
-                    <a href="#" class="bg-white py-6 px-5 rounded-2xl transition hover:ring-offset-2 hover:ring-2 hover:ring-[#0D63F3]">
-                        <h5 class="text-[#1E2B4F] text-lg font-semibold">Neurology</h5>
-                        <p class="text-[#AFAEC3] mt-1">22 doctors</p>
-                    </a>
-
-                    <a href="#" class="bg-white py-6 px-5 rounded-2xl transition hover:ring-offset-2 hover:ring-2 hover:ring-[#0D63F3]">
-                        <h5 class="text-[#1E2B4F] text-lg font-semibold">Dentist</h5>
-                        <p class="text-[#AFAEC3] mt-1">74 doctors</p>
-                    </a>
-
-                    <a href="#" class="bg-white py-6 px-5 rounded-2xl transition hover:ring-offset-2 hover:ring-2 hover:ring-[#0D63F3]">
-                        <h5 class="text-[#1E2B4F] text-lg font-semibold">Allergists</h5>
-                        <p class="text-[#AFAEC3] mt-1">53 doctors</p>
-                    </a>
-
-                    <a href="#" class="bg-white py-6 px-5 rounded-2xl transition hover:ring-offset-2 hover:ring-2 hover:ring-[#0D63F3]">
-                        <h5 class="text-[#1E2B4F] text-lg font-semibold">Cardiologists</h5>
-                        <p class="text-[#AFAEC3] mt-1">794 doctors</p>
-                    </a>
+                    @forelse($specialist as $key => $specialist_item)
+                        <!-- Card -->
+                            <a href="#" class="bg-white py-6 px-5 rounded-2xl transition hover:ring-offset-2 hover:ring-2 hover:ring-[#0D63F3]">
+                                <h5 class="text-[#1E2B4F] text-lg font-semibold">{{ $specialist_item->name ?? '' }}</h5>
+                                <p class="text-[#AFAEC3] mt-1">143 doctors</p>
+                            </a>
+                        <!-- End Card -->
+                    @empty
+                    {{-- empty --}}
+                    @endforelse
                 </div>
-                <!-- End Card -->
+
             </div>
         </section>
         <!-- End Popular Categories -->
@@ -120,82 +105,35 @@
 
                 <!-- Card -->
                 <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 lg:gap-10 mt-10">
-                    <a href="{{ route('appointment.index') }}" class="group">
-                        <div class="relative z-10 w-full h-[350px] rounded-2xl overflow-hidden">
-                            <img src="{{ asset('/assets/frontsite/images/doctor-1.png') }}" class="w-full h-full bg-center bg-no-repeat object-cover object-center" alt="Doctor 1">
-                            <div class="opacity-0 group-hover:opacity-100 transition-all ease-in absolute inset-0 bg-[#0D63F3] bg-opacity-70 flex justify-center items-center">
-                                <span class="text-[#0D63F3] font-medium bg-white rounded-full px-8 py-3">Book Now</span>
-                            </div>
-                        </div>
 
-                        <div class="flex items-center justify-between mt-5">
-                            <div>
-                                <div class="text-[#1E2B4F] text-lg font-semibold">Dr. Galih Pratama</div>
-                                <div class="text-[#AFAEC3] mt-1">Cardiologist</div>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <img src="{{ asset('/assets/frontsite/images/star.svg') }}" alt="Star">
-                                <span class="block text-[#1E2B4F] font-medium">4.5</span>
-                            </div>
-                        </div>
-                    </a>
+                    @forelse($doctor as $key => $doctor_item)
 
-                    <a href="{{ route('appointment.index') }}" class="group">
-                        <div class="relative z-10 w-full h-[350px] rounded-2xl overflow-hidden">
-                            <img src="{{ asset('/assets/frontsite/images/doctor-2.png') }}" class="w-full h-full bg-center bg-no-repeat object-cover object-center" alt="Doctor 1">
-                            <div class="opacity-0 group-hover:opacity-100 transition-all ease-in absolute inset-0 bg-[#0D63F3] bg-opacity-70 flex justify-center items-center">
-                                <span class="text-[#0D63F3] font-medium bg-white rounded-full px-8 py-3">Book Now</span>
+                        <a href="{{ route('appointment.index') }}" class="group">
+                            <div class="relative z-10 w-full h-[350px] rounded-2xl overflow-hidden">
+                                <img src="{{ url(Storage::url($doctor_item->photo)) }}" class="w-full h-full bg-center bg-no-repeat object-cover object-center" alt="{{ $doctor_item->name ?? '' }}">
+                                <div class="opacity-0 group-hover:opacity-100 transition-all ease-in absolute inset-0 bg-[#0D63F3] bg-opacity-70 flex justify-center items-center">
+                                    <span class="text-[#0D63F3] font-medium bg-white rounded-full px-8 py-3">Book Now</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-5">
-                            <div>
-                                <div class="text-[#1E2B4F] text-lg font-semibold">Dr. Anne Hulli</div>
-                                <div class="text-[#AFAEC3] mt-1">Dentist</div>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <img src="{{ asset('/assets/frontsite/images/star.svg') }}" alt="Star">
-                                <span class="block text-[#1E2B4F] font-medium">4.8</span>
-                            </div>
-                        </div>
-                    </a>
 
-                    <a href="{{ route('appointment.index') }}" class="group">
-                        <div class="relative z-10 w-full h-[350px] rounded-2xl overflow-hidden">
-                            <img src="{{ asset('/assets/frontsite/images/doctor-3.png') }}" class="w-full h-full bg-center bg-no-repeat object-cover object-center" alt="Doctor 1">
-                            <div class="opacity-0 group-hover:opacity-100 transition-all ease-in absolute inset-0 bg-[#0D63F3] bg-opacity-70 flex justify-center items-center">
-                                <span class="text-[#0D63F3] font-medium bg-white rounded-full px-8 py-3">Book Now</span>
+                            <div class="flex items-center justify-between mt-5">
+                                <div>
+                                    <div class="text-[#1E2B4F] text-lg font-semibold">{{ $doctor_item->name ?? '' }}</div>
+                                    <div class="text-[#AFAEC3] mt-1">{{ $doctor_item->specialist->name ?? '' }}</div>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <img src="{{ asset('/assets/frontsite/images/star.svg') }}" alt="Star">
+                                    <span class="block text-[#1E2B4F] font-medium">4.5</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-5">
-                            <div>
-                                <div class="text-[#1E2B4F] text-lg font-semibold">Dr. Masayoshi</div>
-                                <div class="text-[#AFAEC3] mt-1">Neurologist</div>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <img src="{{ asset('/assets/frontsite/images/star.svg') }}" alt="Star">
-                                <span class="block text-[#1E2B4F] font-medium">4.5</span>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
 
-                    <a href="{{ route('appointment.index') }}" class="group">
-                        <div class="relative z-10 w-full h-[350px] rounded-2xl overflow-hidden">
-                            <img src="{{ ('/assets/frontsite/images/doctor-4.png') }}" class="w-full h-full bg-center bg-no-repeat object-cover object-center" alt="Doctor 1">
-                            <div class="opacity-0 group-hover:opacity-100 transition-all ease-in absolute inset-0 bg-[#0D63F3] bg-opacity-70 flex justify-center items-center">
-                                <span class="text-[#0D63F3] font-medium bg-white rounded-full px-8 py-3">Book Now</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-5">
-                            <div>
-                                <div class="text-[#1E2B4F] text-lg font-semibold">Dr. Shin Tai</div>
-                                <div class="text-[#AFAEC3] mt-1">Dermatology</div>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <img src="{{ asset('/assets/frontsite/images/star.svg') }}" alt="Star">
-                                <span class="block text-[#1E2B4F] font-medium">4.5</span>
-                            </div>
-                        </div>
-                    </a>
+                    @empty
+
+                        {{-- empty --}}
+
+                    @endforelse
+
                 </div>
                 <!-- End Card -->
             </div>
