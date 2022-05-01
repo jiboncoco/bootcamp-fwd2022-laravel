@@ -8,7 +8,7 @@
 <div class="min-h-screen flex justify-center items-center pt-20 py-28">
     <div class="mx-auto text-center">
         <img
-            src="{{ assetr('/assets/frontsite/images/sign-up-success-ilustration.svg') }}"
+            src="{{ asset('/assets/frontsite/images/sign-up-success-ilustration.svg') }}"
             class="inline-block"
             alt="Sign up success ilustration"
         />
