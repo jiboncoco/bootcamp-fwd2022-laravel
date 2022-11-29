@@ -79,7 +79,7 @@ class UserController extends Controller
         $data = $request->all();
 
         // hash password
-        $data['password'] = Hash::make($data['email']);
+        $data['password'] = Hash::make($data['password']);
 
         // store to database
         $user = User::create($data);
